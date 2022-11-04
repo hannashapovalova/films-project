@@ -14,13 +14,20 @@ const personalMovieDB = {
 };
 
 
-const filmNameFirst = prompt('Один из последних просмотренных фильмов?', '');
-const filmRateFirst = +prompt('На сколько оцените его?', '');
+
 const filmNameSecond = prompt('Один из последних просмотренных фильмов?', '');
 const filmRateSecond = +prompt('На сколько оцените его?', '');
 
-personalMovieDB.movies[filmNameFirst] = filmRateFirst;
+
 personalMovieDB.movies[filmNameSecond] = filmRateSecond;
+
+
+for (let i = 0; i < 2; i++) {
+    const filmNameFirst = prompt('Один из последних просмотренных фильмов?', '');
+    const filmRateFirst = +prompt('На сколько оцените его?', '');
+    personalMovieDB.movies[filmNameFirst] = filmRateFirst;
+
+}
 
 console.log(personalMovieDB);
 
